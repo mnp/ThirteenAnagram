@@ -1,10 +1,16 @@
-; -*- Lisp-Interaction -*-
+; -*- Emacs Lisp -*-
 ;
 ; Neil deGrasse Tyson tweet 12/7/2011: Need a distraction today? Not
 ; only does 12+1=11+2, but the letters "twelve plus one" rearrange to
 ; give you "eleven plus two"
 ;
 ; Sound like a Programming Praxis problem, anyone?
+;
+; Ugly solution below searches +, -, *, / up to 13, in Emacs Lisp for
+; practice. Looping constructs, instead of recursion, avoid blowing
+; out Emacs stack limits.  I estimate O( 2.5 * N^2 ).
+;
+; mitchell.perilstein@gmail.com
 ;
 
 (defconst GENMAX   13)

@@ -3,3 +3,9 @@ only does 12+1=11+2, but the letters "twelve plus one" rearrange to
 give you "eleven plus two"
 
 Sound like a Programming Praxis problem, anyone?
+
+Ugly solution below searches +, -, *, / up to 13, in Emacs Lisp for
+practice. Looping constructs, instead of recursion, avoid blowing
+out Emacs stack limits.  I estimate O( 2.5 * N^2 ).
+
+mitchell.perilstein@gmail.com
